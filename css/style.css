@@ -1,0 +1,198 @@
+body {
+  margin: 0 auto;
+}
+.inst {
+  font-family: Helvetica;
+  color: white;
+  position: relative;
+  left: 10px;
+}
+#inst2 {
+  top:80px;
+}
+section {
+  height: 400px;
+  width: 850px;
+  background-color: black;
+  
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+  
+  overflow: hidden;
+  
+  border-radius: 5px;
+}
+.boardRightBlink {
+  border-style: none solid none none;
+  border-width: 10px;
+  animation: boardRightBlink 1s linear 0s infinite;
+}
+@keyframes boardRightBlink {
+  100% {border-color: red;}
+}
+.boardLeftBlink {
+  border-style: none none none solid;
+  border-width: 10px;
+  animation: boardLeftBlink 1s linear 0s infinite;
+}
+@keyframes boardLeftBlink {
+  100% {border-color: red;}
+}
+#ballRunner {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  margin: 0 auto;
+  
+  position: absolute;
+  top: 50%;
+  left: 0%; 
+  
+ 
+}
+.obstacle {
+  background-color: red;
+  height: 20px;
+  width: 30px;
+  
+  position: absolute;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.obstacleLeft {
+  animation: obstacleLeft 4s linear 0s 1 forwards;
+}
+@keyframes obstacleLeft {
+  0% {left: 100%;}
+  100% {left: 0%;}
+}
+.obstacleRight {
+  animation: obstacleRight 4s linear 0s 1 forwards;
+}
+@keyframes obstacleRight{
+  0% {left: 0%;}
+  100% {left: 100%;}
+}
+#timer {
+  font-family: Helvetica;
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  color: white; 
+  
+  z-index: 100;
+}
+#obstacleCount {
+  font-family: Helvetica;
+  position: absolute;
+  left: 200px;
+  bottom: -10px;
+  color: white; 
+  
+  z-index: 100;
+}
+#obstacleCount {
+  font-family: Helvetica;
+  position: absolute;
+  left: 200px;
+  bottom: -10px;
+  color: white; 
+  
+  z-index: 10;
+}
+#pointCount {
+  font-family: Helvetica;
+  position: absolute;
+  left: 500px;
+  bottom: -10px;
+  color: white; 
+  
+  z-index: 10;
+}
+#bulletCount {
+  font-family: Helvetica;
+  position: absolute;
+  left: 700px;
+  bottom: -10px;
+  color: white; 
+  
+  z-index: 10;
+  
+}
+.hit {
+  animation: hit .5s linear 0s infinite;
+  position: absolute;
+  border-style: solid;
+  border-color: white;
+  
+}
+@keyframes hit {
+  0% {background-color: yellow;}
+  100% {background-color: red;}
+}
+.bullet {
+  height: 5px;
+  width: 10px;
+  
+  position: absolute;
+  
+  background-color: grey;
+  
+  
+  
+  
+}
+.shootRight {
+  border-radius: 0px 30px 30px 0;
+  
+}
+.shootLeft {
+  border-radius: 30px 0px 0px 30px;
+  
+}
+
+.shootPoint {
+  display: initial;
+  color: white;
+  font-family: Helvetica;
+  font-size: 20px;
+  position: relative;
+  z-index: 200;
+  animation: shootPoint .5s ease 0s 1 forwards;
+}
+@keyframes shootPoint {
+  0% {bottom: 0%; font-size: 20px; opacity: 1;}
+  100% {bottom: 130%; font-size: 40px; opacity: 0;}
+}
+.runPointRight {
+  display: initial;
+  color: white;
+  font-family: Helvetica;
+  font-size: 20px;
+  position: relative;
+  z-index: 200;
+  animation: runPointRight .5s ease 0s 1 forwards;
+}
+@keyframes runPointRight {
+  0% {left: 0%; font-size: 20px; opacity: 1;}
+  100% {left: -400%; font-size: 100px; opacity: 0;}
+}
+.runPointLeft {
+  display: initial;
+  color: white;
+  font-family: Helvetica;
+  font-size: 20px;
+  position: relative;
+  z-index: 200;
+  animation: runPointLeft .5s ease 0s 1 forwards;
+}
+@keyframes runPointLeft {
+  0% {left: 0%; font-size: 20px; opacity: 1;}
+  100% {left: 600%; font-size: 100px; opacity: 0;}
+}
