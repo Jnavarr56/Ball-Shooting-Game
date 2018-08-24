@@ -1,5 +1,5 @@
 # Ball-Shooting-Game
-Hosted here: https://codepen.io/jnavarr56/pen/YjRVwg
+Hosted here: https://codepen.io/jnavarr56/full/YjRVwg
 ### Tools
   - Just JS/CSS/HTML!
   
